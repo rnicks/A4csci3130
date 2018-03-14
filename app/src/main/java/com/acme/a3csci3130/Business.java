@@ -12,7 +12,8 @@ import java.util.Map;
  */
 
 public class Business implements Serializable {
-    public int businessNumber;
+    public String bID;
+    public String businessNumber;
     public String name;
     public String email;
     public String primaryBusiness;
@@ -24,8 +25,9 @@ public class Business implements Serializable {
 
     }
 
-    public Business(int businessNumber, String name, String email, String primaryBusiness, String address, String province)
+    public Business(String bID, String businessNumber, String name, String email, String primaryBusiness, String address, String province)
     {
+        this.bID = bID;
         this.businessNumber = businessNumber;
         this.name = name;
         this.email = email;
@@ -37,6 +39,7 @@ public class Business implements Serializable {
     @Exclude
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
+        result.put("bID", bID);
         result.put("businessNumber", businessNumber);
         result.put("name", name);
         result.put("email", email);
