@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
+/**
+ * class for the Activity used to create a new business in the database
+ */
 public class CreateContactAcitivity extends Activity {
 
     private Button submitButton;
@@ -29,6 +33,11 @@ public class CreateContactAcitivity extends Activity {
 
     }
 
+    /**
+     * action performed by submit button
+     * creates a new Business object based on user input, inserts to database
+     * @param v
+     */
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String bID = appState.firebaseReference.push().getKey();

@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * class for the app's main Activity
+ */
 public class MainActivity extends Activity {
 
 
@@ -54,13 +57,22 @@ public class MainActivity extends Activity {
     }
 
 
-
+    /**
+     * called when create contact button is pressed
+     * takes user to the create contact activity
+     * @param v
+     */
     public void createContactButton(View v)
     {
         Intent intent=new Intent(this, CreateContactAcitivity.class);
         startActivityForResult(intent, 1);
     }
 
+    /**
+     * called when the user clicks on a business name
+     * takes user to the detail view page, and passes the info on that business to the new activity
+     * @param business
+     */
     private void showDetailView(Business business)
     {
         Intent intent = new Intent(this, DetailViewActivity.class);

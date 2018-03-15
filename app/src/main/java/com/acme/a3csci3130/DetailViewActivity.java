@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * class for activity used to display detailed view of a specific business
+ */
 public class DetailViewActivity extends Activity {
 
     private EditText nameField, emailField, businessNumField, primaryBusinessField, addressField, provinceField;
@@ -61,6 +64,10 @@ public class DetailViewActivity extends Activity {
         finish();
     }
 
+    /**
+     * deletes the record for the currently viewed business from the database
+     * @param v
+     */
     public void eraseContact(View v)
     {
 

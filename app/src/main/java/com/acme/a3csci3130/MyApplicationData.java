@@ -6,6 +6,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 /**
+ * class to store the firebase reference variables
  * Created by Franz on 2017-05-31.
  */
 
